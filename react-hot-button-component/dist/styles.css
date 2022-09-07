@@ -1,0 +1,37 @@
+.coldest {
+  background-color: purple;
+}
+
+.cold {
+  background-color: rgb(167 56 201);
+}
+
+.warm {
+  background-color: rgb(255 121 10);
+}
+
+.hot {
+  background-color: rgb(255 153 0);
+}
+
+.hotter {
+  background-color: yellow;
+}
+
+.hottest {
+  background-color: white;
+}
+
+.whitetxt {
+  color: white;
+}
+
+.blacktxt {
+  color: black;
+}
+
+button {
+  padding: 10px 15px;
+  box-shadow: 3px 3px black;
+  font-weight: 300;
+}
