@@ -1,0 +1,45 @@
+button {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: solid black 1px;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  transition-duration: 300ms;
+}
+
+.toggle-off,
+.toggle-on {
+  width: 45px;
+  height: 30px;
+  border: solid black 3px;
+  border-radius: 20px;
+}
+
+.toggle-off {
+  background-color: rgb(212 212 212);
+}
+
+.toggle-on {
+  background-color: rgb(15 161 15);
+}
+
+.toggle-off button {
+  left: 0;
+}
+
+.toggle-on button {
+  left: 16px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+p {
+  margin-left: 1rem;
+  font-size: 20px;
+  font-family: sans-serif;
+}
