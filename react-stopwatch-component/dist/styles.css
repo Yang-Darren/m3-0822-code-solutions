@@ -1,0 +1,28 @@
+#circle {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(255 255 255);
+  border: solid black 4px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+i {
+  padding-left: 45px;
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+p {
+  position: absolute;
+  top: 40px;
+  left: 57px;
+  font-weight: bolder;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+button {
+  background-color: white;
+  border: none;
+}
