@@ -50,12 +50,7 @@ app.post('/api/grades', (req, res, next) => {
       const [newGrade] = result.rows;
       res.status(201).json(newGrade);
     })
-    .catch(err => {
-      console.error(err);
-      res.status(500).json({
-        error: 'an unexpected error occurred'
-      });
-    });
+    .catch(error => next(error));
 });
 
 app.get('/api/grades/:gradeId', (req, res, next) => {
@@ -73,19 +68,12 @@ app.get('/api/grades/:gradeId', (req, res, next) => {
     .then(result => {
       const [grade] = result.rows;
       if (!grade) {
-        res.status(404).json({
-          error: `cannot find grade with gradeId ${gradeId}`
-        });
+        throw new ClientError(404, `cannot find grade with gradeId ${gradeId}`);
       } else {
         res.json(grade);
       }
     })
-    .catch(err => {
-      console.error(err);
-      res.status(500).json({
-        error: 'an unexpected error occurred'
-      });
-    });
+    .catch(error => next(error));
 });
 
 app.put('/api/grades/:gradeId', (req, res, next) => {
