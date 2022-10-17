@@ -89,7 +89,7 @@ export default class App extends React.Component {
     })
       .then(res => res.json())
       .then(editedTodo => {
-        const newTodo = this.state.todos;
+        const newTodo = this.state.todos.slice();
         newTodo.splice(index, 1, editedTodo);
         this.setState({
           todos: newTodo
